@@ -5,6 +5,7 @@ import '../features/home/home_screen.dart';
 import '../features/paywall/paywall_screen.dart';
 import '../features/profile/profile_screen.dart';
 import '../features/profile/edit_profile.dart';
+import '../features/planner/planner_screen.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/home',
@@ -19,8 +20,8 @@ final appRouter = GoRouter(
           builder: (context, state) => const HomeScreen(),
         ),
         GoRoute(
-          path: '/paywall_screen',
-          builder: (context, state) => const PaywallScreen(),
+          path: '/planner_screen',
+          builder: (context, state) => const PlannerScreen(),
         ),
         GoRoute(
           path: '/profile_screen',
@@ -32,5 +33,9 @@ final appRouter = GoRouter(
       path: '/edit_profile',
       builder: (context, state) => const EditProfileScreen(),
     ),
+    GoRoute(
+          path: '/paywall_screen',
+          builder: (context, state) => const PaywallScreen(),
+        ),
   ],
 );

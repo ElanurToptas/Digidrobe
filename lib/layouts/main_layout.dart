@@ -8,7 +8,7 @@ class MainLayout extends StatelessWidget {
   int _calculateIndex(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
 
-    if (location.startsWith('/paywall_screen')) return 1;
+    if (location.startsWith('/planner_screen')) return 1;
     if (location.startsWith('/profile_screen')) return 2;
     return 0; 
   }
@@ -19,7 +19,7 @@ class MainLayout extends StatelessWidget {
         context.go('/home');
         break;
       case 1:
-        context.go('/paywall_screen');
+        context.go('/planner_screen');
         break;
       case 2:
         context.go('/profile_screen');
@@ -43,8 +43,8 @@ class MainLayout extends StatelessWidget {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.payment),
-            label: "Paywell",
+            icon: Icon(Icons.calendar_today),
+            label: "Planner",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
