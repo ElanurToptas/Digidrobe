@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+
+class AddProductButton extends StatelessWidget {
+  const AddProductButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      backgroundColor: Colors.black,
+      onPressed: () {},
+      child: const Icon(Icons.add, color: Colors.white),
+    );
+  }
+}

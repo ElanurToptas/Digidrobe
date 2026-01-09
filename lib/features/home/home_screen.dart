@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../data/mock_data.dart';
 import '../../widgets/app_bar.dart';
-import '../../widgets/info_banner.dart';
-import '../../widgets/editor_picks_list.dart';
-import '../../widgets/digistylist_slider.dart';
-import '../../widgets/section_title.dart';
-import '../../widgets/ai_recommendation_card.dart';
-import '../../widgets/horizontal_image_list.dart';
+import 'widgets/info_banner.dart';
+import 'widgets/editor_picks_list.dart';
+import 'widgets/digistylist_slider.dart';
+import 'widgets/section_title.dart';
+import 'widgets/ai_recommendation_card.dart';
+import 'widgets/horizontal_image_list.dart';
 
 
 class HomeScreen extends StatelessWidget {
