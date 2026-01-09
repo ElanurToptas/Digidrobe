@@ -36,7 +36,7 @@ class EditorPicksList extends StatelessWidget {
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
                         colors: [
-                          Colors.black.withOpacity(0.6),
+                          Colors.black.withAlpha(153),
                           Colors.transparent,
                         ],
                       ),

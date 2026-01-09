@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class DigistylistSlider extends StatelessWidget {
   final List<Map<String, String>> items;
 
@@ -28,36 +27,41 @@ class DigistylistSlider extends StatelessWidget {
                     width: double.infinity,
                   ),
                   Positioned(
-                left: 16,
-                bottom: 16,
-                right: 16,
-                  child:Container(
-                     padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.45),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                    child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Bir kombin yap",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
+                    left: 16,
+                    bottom: 16,
+                    right: 16,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 8,
                       ),
-                      SizedBox(height: 4),
-                      Text(
-                        "Herhangi bir randevu, etkinlik, stil",
-                        style:
-                            TextStyle(color: Colors.white70, fontSize: 14),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withAlpha(128),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                    ],
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Bir kombin yap",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            "Herhangi bir randevu, etkinlik, stil",
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                  ),
-              )
                 ],
               ),
             ),

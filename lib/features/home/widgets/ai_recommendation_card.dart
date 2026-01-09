@@ -15,17 +15,18 @@ class AiRecommendationCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           child: Stack(
             children: [
-              Image.asset(image,
-                  width: double.infinity, height: 180, fit: BoxFit.cover),
+              Image.asset(
+                image,
+                width: double.infinity,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
-                    colors: [
-                      Colors.black.withOpacity(0.6),
-                      Colors.transparent,
-                    ],
+                    colors: [Colors.black.withAlpha(153), Colors.transparent],
                   ),
                 ),
               ),
@@ -34,10 +35,12 @@ class AiRecommendationCard extends StatelessWidget {
                 bottom: 16,
                 right: 16,
                 child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.45),
+                    color: Colors.black.withAlpha(128),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: const Column(
@@ -46,17 +49,17 @@ class AiRecommendationCard extends StatelessWidget {
                       Text(
                         "Haftalık Kıyafet Önerileri",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       SizedBox(height: 4),
                       Text(
                         "Yapay zeka tarafından seçilen kişiselleştirilmiş haftalık görünümler.",
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style:
-                            TextStyle(color: Colors.white70, fontSize: 14),
+                        style: TextStyle(color: Colors.white70, fontSize: 14),
                       ),
                     ],
                   ),

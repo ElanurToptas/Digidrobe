@@ -65,6 +65,7 @@ flutter:
   assets:
     - assets/videos/landing.mp4
     - assets/videos/onboarding.mp4
+    - assets/videos/pay.mp4
     - assets/images/fashion.jpg
     - assets/icons/google.png
     - assets/images/1.jpg

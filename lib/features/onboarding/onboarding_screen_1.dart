@@ -91,7 +91,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                           Container(
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
-                              color: Colors.grey.shade200.withOpacity(0.6),
+                              color: Colors.grey.shade200.withAlpha(153),
                               borderRadius: BorderRadius.circular(16),
                             ),
                             child: Column(
@@ -127,8 +127,9 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 8),
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 8,
+                                      ),
                                       child: Text(
                                         'VEYA',
                                         style: TextStyle(color: Colors.black),
