@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'navigation/app_router.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initializeDateFormatting('tr_TR', null);
+
   runApp(const MyApp());
 }
 
@@ -13,9 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: appRouter,
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
+      theme: ThemeData(useMaterial3: true),
     );
   }
 }
