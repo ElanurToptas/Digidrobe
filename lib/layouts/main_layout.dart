@@ -10,7 +10,7 @@ class MainLayout extends StatelessWidget {
 
     if (location.startsWith('/planner_screen')) return 1;
     if (location.startsWith('/profile_screen')) return 2;
-    return 0; 
+    return 0;
   }
 
   void _onTap(BuildContext context, int index) {
@@ -33,23 +33,19 @@ class MainLayout extends StatelessWidget {
 
     return Scaffold(
       body: child,
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) => _onTap(context, index),
+        backgroundColor: Colors.white, 
+        selectedItemColor: Colors.black, 
+        unselectedItemColor: Colors.grey, 
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
             label: "Planner",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
     );
