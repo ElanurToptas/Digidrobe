@@ -8,7 +8,7 @@ import '../features/paywall/paywall_screen.dart';
 import '../features/home/home_screen.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/home',
   routes: [
     GoRoute(
       path: '/',
