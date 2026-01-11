@@ -66,4 +66,37 @@ class UserModel {
     required this.date,
   });
 }
+```
+Onboarding ekranında girilen bilgiler UserProvider aracılığıyla saklanır
+Kullanıcı bilgileri uygulama genelinde tek bir state üzerinden yönetilir
+Profil ve Profil Düzenleme ekranlarında bu veriler okunur ve güncellenir
+Firebase kullanılmadan lokal state yapısı ile çalışır
+
+## 🔀 Navigasyon Yapısı
+
+Navigasyon yapısı GoRouter kullanılarak oluşturulmuştur.
+- /               → Landing Screen
+- /onboarding1    → Onboarding Adım 1
+- /onboarding2    → Onboarding Adım 2
+- /paywall        → Paywall Ekranı
+- /home           → Anasayfa
+- /profile        → Profil Ekranı
+- /edit-profile   → Profil Düzenleme Ekranı
+
+Sayfalar arası geçişler context.go() ile sağlanmaktadır
+Bottom Navigation Bar üzerinden ana sayfalar arasında geçiş yapılır
+
+## 🔥 Firebase Durumu
+
+Firebase projesi oluşturulmuştur
+firebase_options.dart dosyası projeye eklenmiştir
+Billing gereksinimi nedeniyle aktif Firestore kullanımı kapatılmıştır
+Firebase entegrasyonu opsiyonel olarak hazır durumdadır
+İleride kullanıcı verilerinin backend’e taşınmasına uygundur
+
+## 👩‍💻 Geliştirici
+
+Elanur Toptaş
+Flutter & Frontend Developer
+
 
