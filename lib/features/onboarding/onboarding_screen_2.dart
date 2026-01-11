@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_digidrobe/models/user_model.dart';
+import 'package:my_digidrobe/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class OnboardingScreen2 extends StatefulWidget {
   const OnboardingScreen2({super.key});
@@ -75,7 +78,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [ Color(0xFFFFFAFB), Colors.white],
+            colors: [Color(0xFFFFFAFB), Colors.white],
           ),
         ),
         child: SafeArea(
@@ -183,6 +186,14 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                   child: ElevatedButton(
                     onPressed: isFormValid
                         ? () {
+                            context.read<UserProvider>().setUser(
+                              UserModel(
+                                name: _nameController.text,
+                                gen: selectedGender!,
+                                date: _selectedDate!,
+                              ),
+                            );
+
                             context.go('/home');
                           }
                         : null,

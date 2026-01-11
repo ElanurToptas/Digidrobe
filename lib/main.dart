@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_digidrobe/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 import 'navigation/app_router.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -14,7 +16,12 @@ void main() async {
     );
   }
 
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => UserProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

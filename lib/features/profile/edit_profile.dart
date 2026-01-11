@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_digidrobe/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 import 'widgets/edit_profile_avatar.dart';
 import 'widgets/edit_profile_item.dart';
 import 'widgets/edit_profile_bottomsheet.dart';
@@ -11,12 +13,11 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
-  String username = "ela";
-  String gender = "Kadın";
-  String birthDate = "13 Oca 2008";
-
   @override
   Widget build(BuildContext context) {
+    final userProvider = context.watch<UserProvider>();
+    final user = userProvider.user;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -40,14 +41,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
             EditProfileItem(
               title: "Kullanıcı adı",
-              value: username,
+              value: user?.name ?? "",
               onTap: () {
                 showEditProfileBottomSheet(
                   context: context,
                   title: "Kullanıcı adı",
-                  currentValue: username,
+                  currentValue: user?.name ?? "",
                   onSave: (newValue) {
-                    setState(() => username = newValue);
+                    userProvider.updateUser(name: newValue);
                   },
                 );
               },
@@ -55,14 +56,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
             EditProfileItem(
               title: "Cinsiyet",
-              value: gender,
+              value: user?.gen ?? "",
               onTap: () {
                 showEditProfileBottomSheet(
                   context: context,
                   title: "Cinsiyet",
-                  currentValue: gender,
+                  currentValue: user?.gen ?? "",
                   onSave: (newValue) {
-                    setState(() => gender = newValue);
+                    userProvider.updateUser(gen: newValue);
                   },
                 );
               },
@@ -70,16 +71,20 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
             EditProfileItem(
               title: "Doğum Tarihi",
-              value: birthDate,
-              onTap: () {
-                showEditProfileBottomSheet(
+              value: user == null
+                  ? ""
+                  : "${user.date.day}.${user.date.month}.${user.date.year}",
+              onTap: () async {
+                final picked = await showDatePicker(
                   context: context,
-                  title: "Doğum Tarihi",
-                  currentValue: birthDate,
-                  onSave: (newValue) {
-                    setState(() => birthDate = newValue);
-                  },
+                  initialDate: user?.date ?? DateTime(2000),
+                  firstDate: DateTime(1950),
+                  lastDate: DateTime.now(),
                 );
+
+                if (picked != null) {
+                  userProvider.updateUser(date: picked);
+                }
               },
             ),
           ],
