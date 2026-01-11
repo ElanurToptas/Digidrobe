@@ -1,16 +1,69 @@
-# my_digidrobe
+# My DigiDrobe 👗📱
 
-A new Flutter project.
+My DigiDrobe, kullanıcıya özel dijital gardırop deneyimi sunmayı hedefleyen bir Flutter mobil uygulamasıdır.  
+Uygulama, onboarding sürecinde kullanıcıdan alınan bilgileri yönetir ve kişiselleştirilmiş bir ana sayfa ve profil deneyimi sunar.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Özellikler
 
-A few resources to get you started if this is your first Flutter project:
+### Landing Screen
+- Video arka planlı karşılama ekranı
+- Apple / Google / Misafir ile devam et (UI)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Onboarding (2 Adım)
+- Kullanıcı adı
+- Cinsiyet
+- Doğum tarihi
+- Adım bazlı ilerleme göstergesi
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Paywall Ekranı
+- UI odaklı
+- Ödeme entegrasyonu yok
+
+### Anasayfa
+- Editör önerileri
+- Yapay zeka öneri alanı (UI)
+- Yatay ürün listeleri
+- Modüler widget yapısı
+
+### Profil Ekranı
+- Kullanıcı bilgilerini görüntüleme
+
+### Profil Düzenleme Ekranı
+- Kullanıcı adı düzenleme
+- Cinsiyet düzenleme
+- Doğum tarihi düzenleme
+
+### İşlem / Aksiyon Ekranı
+- Kullanıcı etkileşimine yönelik aksiyon alanı (UI)
+
+---
+
+## 🧠 Kullanılan Teknolojiler
+
+- Flutter
+- Material 3
+- Provider (State Management)
+- GoRouter (Navigation)
+- Firebase (Opsiyonel)
+
+---
+
+## 🗂️ State Management
+
+Kullanıcı bilgileri Provider kullanılarak yönetilmektedir.
+
+```dart
+class UserModel {
+  final String name;
+  final String gen;
+  final DateTime date;
+
+  UserModel({
+    required this.name,
+    required this.gen,
+    required this.date,
+  });
+}
+
