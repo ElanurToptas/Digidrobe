@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742414660610",
+    "project_id": "my-digidrobe",
+    "storage_bucket": "my-digidrobe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742414660610:android:17d29915c8bf34078fa31b",
+        "android_client_info": {
+          "package_name": "com.example.my_digidrobe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjGbetAvCjiYBoQMcStZ7GHW0BLn_7nEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
